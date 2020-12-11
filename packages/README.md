@@ -61,6 +61,10 @@ use Automattic\Jetpack\Assets\Logo as Jetpack_Logo;
 $logo = new Jetpack_Logo();
 ```
 
+### Package textdomains
+
+Jetpack's packages use the 'jetpack' textdomain for translatable strings. Plugins that use these packages must change the textdomains to the plugin's textdomain. A few tools that can help automate this process are [node-wp-i18n](https://github.com/cedaro/node-wp-i18n) and [wp-textdomain](https://github.com/timelsass/wp-textdomain).
+
 ## Deploying packages
 
 While the script we use to deploy the package takes care of everything, we might need to setup some stuff online in GitHub and Packagist. Let's use the Autoloader package as an example. 
@@ -80,9 +84,11 @@ You may run unit tests locally for any given package by running `composer phpuni
 via Jetpack Docker with the command `yarn docker:phpunit:package` for all package unit tests or 
 `yarn docker:phpunit:package packagename` for a specific one. 
 
-## Creating a New Package
+## Developing Jetpack Packages
 
-### Should my code be in a Package?
+### Creating a New Package
+
+#### Should my code be in a Package?
 
 Not sure if your code should be in a Package? Here are some general guidelines we follow when deciding: 
 
@@ -99,3 +105,7 @@ Not sure if your code should be in a Package? Here are some general guidelines w
 ### Package Autoloading
 
 All new Jetpack package development should use classmap autoloading, which allows the class and file names to comply with the WordPress Coding Standards.
+
+### Textdomains
+
+Jetpack packages must use the 'jetpack' textdomain.
