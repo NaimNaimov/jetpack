@@ -161,24 +161,6 @@ class Test_Admin_Menu extends WP_UnitTestCase {
 	}
 
 	/**
-	 * Shim wpcomsh fallback site icon.
-	 *
-	 * @return string
-	 */
-	public function wpcomsh_site_icon_url() {
-		return 'https://s0.wp.com/i/webclip.png';
-	}
-
-	/**
-	 * Custom site icon.
-	 *
-	 * @return string
-	 */
-	public function custom_site_icon_url() {
-		return 'https://s0.wp.com/i/jetpack.png';
-	}
-
-	/**
 	 * Tests add_my_home_menu
 	 *
 	 * @covers ::add_my_home_menu
