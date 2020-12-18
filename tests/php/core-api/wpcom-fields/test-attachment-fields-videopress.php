@@ -11,7 +11,7 @@ require_once dirname( dirname( __DIR__ ) ) . '/lib/class-wp-test-jetpack-rest-te
  */
 class Test_WPCOM_REST_API_V2_Attachment_VideoPress_Field extends WP_Test_Jetpack_REST_Testcase {
 	/**
-	 * Checks that the jetpack_videopress_guid field is included in the schema
+	 * Checks that the jetpack_videopress field is included in the schema
 	 */
 	public function test_attachment_fields_videopress_get_schema() {
 		$plugin = new WPCOM_REST_API_V2_Attachment_VideoPress_Field();
@@ -31,7 +31,7 @@ class Test_WPCOM_REST_API_V2_Attachment_VideoPress_Field extends WP_Test_Jetpack
 	}
 
 	/**
-	 * Checks that the jetpack_videopress_guid field is filled with the VideoPress GUID
+	 * Checks that the jetpack_videopress field is filled with the VideoPress GUID
 	 */
 	public function test_attachment_fields_videopress_get() {
 		$mock = $this->getMockBuilder( 'WPCOM_REST_API_V2_Attachment_VideoPress_Field' )
@@ -56,7 +56,7 @@ class Test_WPCOM_REST_API_V2_Attachment_VideoPress_Field extends WP_Test_Jetpack
 	}
 
 	/**
-	 * Checks that the jetpack_videopress_guid field is removed for non videos
+	 * Checks that the jetpack_videopress field is removed for non videos
 	 */
 	public function test_attachment_fields_videopress_remove_for_non_videos() {
 		$plugin                     = new WPCOM_REST_API_V2_Attachment_VideoPress_Field();

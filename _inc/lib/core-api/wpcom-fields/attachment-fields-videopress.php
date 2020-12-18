@@ -110,7 +110,7 @@ class WPCOM_REST_API_V2_Attachment_VideoPress_Field extends WPCOM_REST_API_V2_Fi
 	}
 
 	/**
-	 * Removes the jetpack_videopress_guid field from the response if the
+	 * Removes the jetpack_videopress field from the response if the
 	 * given attachment is not a video.
 	 *
 	 * @param WP_REST_Response $response Response from the attachment endpoint.
